@@ -6,16 +6,17 @@ void main() => runApp(BMICalculator());
 class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ColorScheme currentColorScheme = Theme.of(context).colorScheme; // 當前主題顏色
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.purple,
-        ),
+        // floatingActionButtonTheme: FloatingActionButtonThemeData(
+        //   foregroundColor: currentColorScheme.onPrimary,
+        //   backgroundColor: currentColorScheme.primary,
+        // ),
         appBarTheme: AppBarTheme(
-          color: Color(0xFF0f1427),
+          color: Color(0XFF0F1427),
         ),
-        scaffoldBackgroundColor: Color(0xFF0f1427),
+        scaffoldBackgroundColor: Color(0XFF0F1427),
       ),
       home: InputPage(),
     );
