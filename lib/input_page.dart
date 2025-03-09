@@ -74,10 +74,12 @@ class _InputPageState extends State<InputPage> {
 
 class ReusableCard extends StatelessWidget {
   final Color color;
+  final Widget? childWidget; // nullable
 
   const ReusableCard({
     super.key,
     required this.color,
+    this.childWidget,
   });
 
   @override
@@ -88,6 +90,7 @@ class ReusableCard extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: color,
       ),
+      child: childWidget,
     );
   }
 }
